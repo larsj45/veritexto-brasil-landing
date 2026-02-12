@@ -1,0 +1,11 @@
+1. Hero
+   - Headline: Veritexto Brasil — Detecção de IA
+   - Subheadline: Detecção de conteúdos gerados por IA, integração com LMS
+   - CTAs: Assinar Detecção IA | Ver estudo de caso
+2. Sobre
+3. Como funciona
+4. Planos
+5. Casos de uso
+6. Roadmap
+7. Prova social
+8. Rodapé
