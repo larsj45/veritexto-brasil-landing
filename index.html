@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VeriTexto - Detecte Conteúdo Gerado por IA com 99,9% de Precisão</title>
+    <meta name="description" content="VeriTexto: verificação de texto por IA para universidades brasileiras. Detecção com 99,9% de precisão, integração Moodle/Canvas, LGPD compliant.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{colors:{brand:'#059669','brand-dark':'#047857','brand-light':'#10b981','brand-50':'#ecfdf5'}}}}</script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>body{font-family:'Inter',sans-serif}html{scroll-behavior:smooth}</style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Nav -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/" class="text-2xl font-extrabold text-brand">Veri<span class="text-gray-900">Texto</span></a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+                <a href="#funcionalidades" class="hover:text-brand transition">Funcionalidades</a>
+                <a href="#planos" class="hover:text-brand transition">Planos</a>
+                <a href="#contato" class="hover:text-brand transition">Contato</a>
+                <a href="#teste" class="bg-brand text-white px-5 py-2.5 rounded-lg hover:bg-brand-dark transition">Teste Grátis</a>
+            </div>
+            <button class="md:hidden text-gray-600" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="#funcionalidades" class="block py-2 text-gray-600">Funcionalidades</a>
+            <a href="#planos" class="block py-2 text-gray-600">Planos</a>
+            <a href="#contato" class="block py-2 text-gray-600">Contato</a>
+            <a href="#teste" class="block py-2 text-brand font-semibold">Teste Grátis</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-green-50 via-white to-emerald-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-block bg-green-100 text-brand text-sm font-semibold px-4 py-1.5 rounded-full mb-6">✅ Verificação de Texto por IA</div>
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">Detecte Conteúdo Gerado por IA com <span class="text-brand">99,9% de Precisão</span></h1>
+                    <p class="text-xl text-gray-600 mb-8">A solução brasileira para integridade acadêmica. Proteja sua instituição contra textos gerados por ChatGPT, Claude e outros modelos de IA.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#teste" class="bg-brand text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-brand-dark transition shadow-lg shadow-green-200 text-center">Teste Grátis</a>
+                        <a href="#contato" class="border-2 border-brand text-brand px-8 py-4 rounded-xl text-lg font-semibold hover:bg-green-50 transition text-center">Fale Conosco</a>
+                    </div>
+                    <div class="flex items-center gap-6 mt-8 text-sm text-gray-500">
+                        <span class="flex items-center gap-1">🔒 LGPD Compliant</span>
+                        <span class="flex items-center gap-1">🇧🇷 Feito para o Brasil</span>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-brand to-emerald-700 rounded-2xl p-8 text-white shadow-2xl">
+                        <div class="text-sm font-semibold text-green-200 mb-4">ANÁLISE EM TEMPO REAL</div>
+                        <div class="space-y-3">
+                            <div class="bg-white/10 rounded-lg p-4">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm">Probabilidade de IA</span>
+                                    <span class="font-bold text-yellow-300">97,3%</span>
+                                </div>
+                                <div class="w-full bg-white/20 rounded-full h-2"><div class="bg-yellow-400 h-2 rounded-full" style="width:97%"></div></div>
+                            </div>
+                            <div class="bg-white/10 rounded-lg p-4">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm">Similaridade</span>
+                                    <span class="font-bold text-green-300">12%</span>
+                                </div>
+                                <div class="w-full bg-white/20 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full" style="width:12%"></div></div>
+                            </div>
+                            <div class="bg-white/10 rounded-lg p-3 text-sm">
+                                <div class="text-green-200 mb-1">Trechos detectados:</div>
+                                <div class="space-y-1">
+                                    <div class="flex items-center gap-2"><span class="bg-yellow-400/30 text-yellow-200 px-2 py-0.5 rounded text-xs">IA</span> Parágrafo 1, 3, 5-7</div>
+                                    <div class="flex items-center gap-2"><span class="bg-green-400/30 text-green-200 px-2 py-0.5 rounded text-xs">OK</span> Parágrafo 2, 4, 8</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social proof -->
+    <section class="py-10 bg-gray-50 border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div><div class="text-3xl font-extrabold text-gray-900">99,9%</div><div class="text-gray-500 text-sm mt-1">Precisão</div></div>
+                <div><div class="text-3xl font-extrabold text-gray-900">+20</div><div class="text-gray-500 text-sm mt-1">Idiomas</div></div>
+                <div><div class="text-3xl font-extrabold text-gray-900">&lt;5s</div><div class="text-gray-500 text-sm mt-1">Tempo de Análise</div></div>
+                <div><div class="text-3xl font-extrabold text-gray-900">100%</div><div class="text-gray-500 text-sm mt-1">LGPD Compliant</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="funcionalidades" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Por que o VeriTexto?</h2>
+                <p class="text-gray-600 text-lg">Tecnologia de ponta adaptada para a realidade brasileira</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-green-50 rounded-2xl p-8 hover:shadow-lg transition border border-green-100">
+                    <div class="bg-brand text-white rounded-xl w-14 h-14 flex items-center justify-center text-2xl mb-6">🤖</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Detecção de IA Avançada</h3>
+                    <p class="text-gray-600">Identifica textos gerados por ChatGPT, Claude, Gemini, Llama e outros. Análise frase a frase com pontuação de confiança.</p>
+                </div>
+                <div class="bg-green-50 rounded-2xl p-8 hover:shadow-lg transition border border-green-100">
+                    <div class="bg-brand text-white rounded-xl w-14 h-14 flex items-center justify-center text-2xl mb-6">🔍</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Verificação de Similaridade</h3>
+                    <p class="text-gray-600">Compare textos contra bilhões de fontes acadêmicas e web. Detecção de paráfrases e plágio sofisticado.</p>
+                </div>
+                <div class="bg-green-50 rounded-2xl p-8 hover:shadow-lg transition border border-green-100">
+                    <div class="bg-brand text-white rounded-xl w-14 h-14 flex items-center justify-center text-2xl mb-6">🔗</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Integração Moodle & Canvas</h3>
+                    <p class="text-gray-600">Plug-in nativo para os LMS mais usados no Brasil. Professores verificam trabalhos sem sair da plataforma.</p>
+                </div>
+                <div class="bg-green-50 rounded-2xl p-8 hover:shadow-lg transition border border-green-100">
+                    <div class="bg-brand text-white rounded-xl w-14 h-14 flex items-center justify-center text-2xl mb-6">🔒</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">LGPD Compliant</h3>
+                    <p class="text-gray-600">Dados processados em conformidade total com a Lei Geral de Proteção de Dados. Documentos não são retidos.</p>
+                </div>
+                <div class="bg-green-50 rounded-2xl p-8 hover:shadow-lg transition border border-green-100">
+                    <div class="bg-brand text-white rounded-xl w-14 h-14 flex items-center justify-center text-2xl mb-6">🌍</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">+20 Idiomas</h3>
+                    <p class="text-gray-600">Suporte nativo ao Português Brasileiro e mais de 20 idiomas. Ideal para instituições com programas internacionais.</p>
+                </div>
+                <div class="bg-green-50 rounded-2xl p-8 hover:shadow-lg transition border border-green-100">
+                    <div class="bg-brand text-white rounded-xl w-14 h-14 flex items-center justify-center text-2xl mb-6">📊</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Relatórios Detalhados</h3>
+                    <p class="text-gray-600">Visualize trechos suspeitos, porcentagem de IA e fontes encontradas. Exporte em PDF para comitês acadêmicos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Como Funciona</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="text-center">
+                    <div class="bg-brand text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-6">1</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Envie o Texto</h3>
+                    <p class="text-gray-600 text-sm">Cole o texto, faça upload de um documento ou integre via LMS.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-brand text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-6">2</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Análise Automática</h3>
+                    <p class="text-gray-600 text-sm">Nossa IA analisa padrões linguísticos e compara com bilhões de fontes em segundos.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-brand text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-6">3</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Receba o Relatório</h3>
+                    <p class="text-gray-600 text-sm">Relatório detalhado com porcentagem de IA, similaridade e trechos identificados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="planos" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Planos</h2>
+                <p class="text-gray-600 text-lg">Escolha o plano ideal para sua instituição</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Básico -->
+                <div class="bg-white rounded-2xl border-2 border-gray-200 p-8 hover:shadow-lg transition">
+                    <div class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Básico</div>
+                    <div class="text-4xl font-extrabold text-gray-900 mb-1">—</div>
+                    <div class="text-gray-500 text-sm mb-6">Preço sob consulta</div>
+                    <ul class="space-y-3 text-sm text-gray-600 mb-8">
+                        <li class="flex items-center gap-2"><svg class="w-5 h-5 text-brand flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Detecção de IA</li>
+                        <li class="flex items-center gap-2"><svg class="w-5 h-5 text-brand flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Até 500 verificações/mês</li>
+                        <li class="flex items-center gap-2"><svg class="w-5 h-5 text-brand flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Relatórios básicos</li>
+                        <li class="flex items-center gap-2"><svg class="w-5 h-5 text-brand flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Suporte por e-mail</li>
+                    </ul>
+                    <a href="#contato" class="block w-full text-center border-2 border-brand text-brand font-semibold py-3 rounded-xl hover:bg-green-50 transition">Fale Conosco</a>
+                </div>
+                <!-- Profissional -->
+                <div class="bg-white rounded-2xl border-2 border-brand p-8 shadow-lg relative">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand text-white text-xs font-bold px-4 py-1 rounded-full">MAIS POPULAR</div>
+                    <div class="text-sm font-semibold text-brand uppercase tracking-wide mb-2">Profissional</div>
+                    <div class="text-4xl font-extrabold text-gray-900 mb-1">—</div>
+                    <div class="text-gray-500 text-sm mb-6">Preço sob consulta</div>
+                    <ul class="space-y-3 text-sm text-gray-600 mb-8">
+                        <li class="flex items-center gap-2"><svg class="w-5 h-5 text-brand flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Tudo do Básico</li>
+                        <li class="flex items-center gap-2"><svg class="w-5 h-5 text-brand flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Verificações ilimitadas</li>
+                        <li class="flex items-center gap-2"><svg class="w-5 h-5 text-brand flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Integração Moodle/Canvas</li>
+                        <li class="flex items-center gap-2"><svg class="w-5 h-5 text-brand flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Verificação de similaridade</li>
+                        <li class="flex items-center gap-2"><svg class="w-5 h-5 text-brand flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Suporte prioritário</li>
+                    </ul>
+                    <a href="#contato" class="block w-full text-center bg-brand text-white font-semibold py-3 rounded-xl hover:bg-brand-dark transition">Fale Conosco</a>
+                </div>
+                <!-- Institucional -->
+                <div class="bg-white rounded-2xl border-2 border-gray-200 p-8 hover:shadow-lg transition">
+                    <div class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Institucional</div>
+                    <div class="text-4xl font-extrabold text-gray-900 mb-1">—</div>
+                    <div class="text-gray-500 text-sm mb-6">Preço sob consulta</div>
+                    <ul class="space-y-3 text-sm text-gray-600 mb-8">
+                        <li class="flex items-center gap-2"><svg class="w-5 h-5 text-brand flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Tudo do Profissional</li>
+                        <li class="flex items-center gap-2"><svg class="w-5 h-5 text-brand flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>API dedicada</li>
+                        <li class="flex items-center gap-2"><svg class="w-5 h-5 text-brand flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Dashboard administrativo</li>
+                        <li class="flex items-center gap-2"><svg class="w-5 h-5 text-brand flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>SLA garantido</li>
+                        <li class="flex items-center gap-2"><svg class="w-5 h-5 text-brand flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Gerente de conta dedicado</li>
+                    </ul>
+                    <a href="#contato" class="block w-full text-center border-2 border-brand text-brand font-semibold py-3 rounded-xl hover:bg-green-50 transition">Fale Conosco</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="teste" class="py-20 bg-gradient-to-br from-brand to-emerald-700 text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Experimente o VeriTexto Gratuitamente</h2>
+            <p class="text-green-200 text-lg mb-10">Teste nossa plataforma sem compromisso. Veja como funciona com textos reais da sua instituição.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="mailto:contato@veritexto.com.br?subject=Teste%20Grátis%20VeriTexto" class="bg-white text-brand px-8 py-4 rounded-xl text-lg font-semibold hover:bg-green-50 transition shadow-lg">Teste Grátis</a>
+                <a href="#contato" class="border-2 border-white text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-white/10 transition">Fale Conosco</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contato" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Fale Conosco</h2>
+                <p class="text-gray-600 text-lg">Nossa equipe está pronta para ajudar sua instituição</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-8 md:p-12">
+                <form class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Nome</label>
+                        <input type="text" placeholder="Seu nome" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand/50 focus:border-brand">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                        <input type="email" placeholder="seu@email.com.br" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand/50 focus:border-brand">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Instituição</label>
+                        <input type="text" placeholder="Nome da instituição" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand/50 focus:border-brand">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
+                        <input type="tel" placeholder="(11) 99999-9999" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand/50 focus:border-brand">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Mensagem</label>
+                        <textarea rows="4" placeholder="Como podemos ajudar?" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand/50 focus:border-brand"></textarea>
+                    </div>
+                    <div class="md:col-span-2">
+                        <a href="mailto:contato@veritexto.com.br" class="inline-block bg-brand text-white font-semibold px-8 py-4 rounded-xl hover:bg-brand-dark transition shadow-lg shadow-green-200 text-lg">Enviar Mensagem</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div>
+                    <a href="/" class="text-xl font-extrabold text-white">Veri<span class="text-brand-light">Texto</span></a>
+                    <span class="text-gray-600 mx-2">—</span>
+                    <span class="text-gray-500 text-sm">Uma solução Learnbase</span>
+                </div>
+                <div class="flex items-center gap-6 text-sm">
+                    <span>🔒 LGPD Compliant</span>
+                    <span>🇧🇷 Brasil</span>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-500">
+                <p>VeriTexto - Uma solução Learnbase Gestão e Consultoria Educacional S.A. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
